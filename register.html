@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+	Jethwa, Mittal
+	Class Account #jadrn020
+	Project #3
+	Fall 2017
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SDSU Marathon | Home</title>
+	
+    <!-- CHANGE THIS BEFORE SUBMISSION
+    <link rel="stylesheet" href="/bootstrap/js/bootstrap.min.js">
+    <script type="text/javascript" src="/jquery/jquery.js"></script>        
+    -->
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/runners_home.css" />
+	
+</head>
+<body>
+
+	<nav class="header navbar-fixed-top">
+			<a href="index.html"><img src="images/mylogo.PNG" class="logo" alt="Logo"></a>
+			<div class="wrapper">
+				<ul class="right-content">
+					<li>
+						<table id="countdown-timer" class="countdown">
+							<tr class="time">
+								<td><div id="countdown-days">--</div></td>
+								<td><div id="countdown-hrs">--</div></td>
+								<td><div id="countdown-mins">--</div></td>
+								<td><div id="countdown-secs">--</div></td>
+							</tr>
+							<tr class="labels">
+								<td>Days</td><td>Hours</td><td>Min</td><td>Sec</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<a href="index.html" class="btn home-btn" role="button">About Marathon</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	
+
+	<div class="container custom-container">
+
+		<div class="form-header">
+			<h1 class="display-3 text-center">Registration</h1>
+			<hr>
+		</div>
+		 <form  
+	        name="registration_form"
+			enctype="multipart/form-data"
+	        method="POST"
+	        action="/~jadrn020/proj3/php/process_request.php"> 
+
+	    
+	    	<div class="form-row col-md-12">
+		    	<label for="uploadFile">Upload Profile Image<span class="mandate">*</span></label>
+			    <input type="file" id="uploadFile" name="uploadFile" accept="image/*">
+			    <button type="button" id="imageUploadBtn"></button>
+			    <span class="text-info" id="fileName">&nbsp;</span>
+			    <input type="text" name="image_name" id="hidden_image_name"/>
+			</div>
+
+	    	<div class="form-row">
+			    <div class="form-group col-md-4">
+			      <label for="fname" class="col-form-label">First Name<span class="mandate">*</span></label>
+			      <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name">
+			    </div>
+			    <div class="form-group col-md-4">
+			      <label for="mname" class="col-form-label">Middle Name</label>
+			      <input type="text" class="form-control" name="mname" id="mname" placeholder="Middle Name">
+			    </div>
+			    <div class="form-group col-md-4">
+			      <label for="lname" class="col-form-label">Last Name<span class="mandate">*</span></label>
+			      <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name">
+			    </div>
+		  	</div>
+
+	    	<div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="inputAddress" class="col-form-label">Address Line 1<span class="mandate">*</span></label>
+			      <input type="text" class="form-control" name="address1" id="inputAddress" placeholder="123 Street">
+			    </div>
+			    <div class="form-group col-md-6">
+			      <label for="inputAddress2" class="col-form-label">Address Line 2</label>
+			      <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment Number">
+			    </div>
+		  	</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputCity" class="col-form-label">City<span class="mandate">*</span></label>
+					<input type="text" class="form-control" name="city" id="inputCity">
+				</div>
+				<div class="form-group col-md-4">
+					<label for="inputState" class="col-form-label">State<span class="mandate">*</span></label>
+					<input type="text" class="form-control" name="state" id="inputState" placeholder="2 digit state code" maxlength="2">
+				</div>
+				<div class="form-group col-md-2">
+					<label for="inputZip" class="col-form-label">Zip<span class="mandate">*</span></label>
+					<input type="text" class="form-control" name="zip" id="inputZip" size="5" maxlength="5">
+				</div>
+			</div>
+			
+			<div class="form-row">
+			    
+			    <div class="form-group col-md-6">
+				    <label for="inputEmail" class="col-form-label">Email<span class="mandate">*</span></label>
+				    <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+			    </div>
+			    			    
+
+			    <div class="form-group col-md-6">
+				    <label for="phone" class="col-form-label">Phone Number<span class="mandate">*</span></label>
+	                <div class="form-group">
+	                    <div class="col-xs-3 phone-no">
+	                        <input type="tel" name="phone1" id="phone1" class="form-control" value="" placeholder="Area Code" size="3" maxlength="3">
+	                    </div>
+	                   
+	                    <div class="col-xs-3 phone-no">
+	                        <input type="tel" name="phone2" id="phone2" class="form-control" value="" placeholder="Prefix" size="3" maxlength="3">
+	                    </div>
+	                  
+	                    <div class="col-xs-4">
+	                        <input type="tel" name="phone3" id="phone3" class="form-control" value="" placeholder="Line Number" size="4" maxlength="4">
+	                    </div>
+	                </div>
+            	</div>
+
+		  	</div>
+
+		  	<div class="form-row">
+
+			  	<div class="col-md-3">
+	            	<label for="dob" class="col-form-label">Date of Birth<span class="mandate">*</span></label>
+	            	<div class="form-group">
+		            	<label class="form-check-label text-center">
+		            		<input type="text" class="form-control" name="dob_m" id="dob_m" size="2" maxlength="2" name="month" placeholder="MM">
+		            		<small>Month</small>
+		            	</label>
+					    <label class="form-check-label text-center">
+					    	<input type="text" class="form-control" name="dob_d" id="dob_d" size="2" maxlength="2" name="day" placeholder="DD">
+					    	<small>Day</small>
+					    </label>
+					    <label class="form-check-label text-center">
+					    	<input type="text" class="form-control" name="dob_y" id="dob_y" size="4" maxlength="4" name="year" placeholder="YYYY">
+					    	<small>Year</small>
+					    </label>
+					</div>
+	            </div>
+
+	            <div class="col-md-3">
+			  		<label for="gender" class="col-form-label">Gender<span class="mandate">*</span></label>
+			  		<div class="form-group">
+			  		  	<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="radio" name="gender" value="male">
+						    Male
+						  </label>
+						</div>
+						<div class="form-check">
+						  <label class="form-check-label">
+						    <input class="form-check-input" type="radio" name="gender" value="female">
+						    Female
+						  </label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<label for="category" class="col-form-label">Category<span class="mandate">*</span></label>
+		  		  	<select class="form-control" name="category" id="category">
+						<option>--------</option>
+						<option>Teen</option>
+						<option>Adult</option>
+						<option>Senior</option>
+					</select>
+				</div>
+
+	        </div>
+
+	        <div class="form-row col-md-12">
+
+	        	<div class="form-group col-md-6 trimpadding">
+					<label for="conditions">Medical Conditions</label>
+					<textarea class="form-control" name="conditions" id="conditions" rows="3"></textarea>
+				</div>
+
+	        	<div class="form-group col-md-6">
+			  		<label for="expLevel" class="col-form-label">Experience Level<span class="mandate">*</span></label>
+		  		  	<div class="form-check ">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="expLevel" value="Novice">
+					    Novice
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="expLevel" value="Experienced">
+					    Experienced
+					  </label>
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+					    <input class="form-check-input" type="radio" name="expLevel" value="Expert">
+					    Expert
+					  </label>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="form-row col-md-12">
+				<span class="mandate">* Mandatory fields</span>
+				<p class="alert" id="alert-msg">&nbsp;</p>
+			</div>
+
+
+			<div class="buttons col-md-12 text-center">
+				<button type="reset" class="btn btn-lg btn-default btn-reset">Reset</button>
+	  			<button type="submit" class="btn btn-lg btn-primary btn-register" >Register</button>
+	  		</div>
+
+        </form>   
+	</div>
+
+    <div id="busy_wait">&nbsp;</div>
+
+	    <!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Registration Confirmation</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        Congratulations! You are successfully registered for the marathon.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</body>
+</html>

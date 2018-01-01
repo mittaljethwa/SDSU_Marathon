@@ -1,0 +1,209 @@
+/*	
+	Jethwa, Mittal
+	Class Account #jadrn020
+	Project #3
+	Fall 2017
+*/
+
+/*
+Citation: Gradients used for buttons are generated from "CSSMATIC", URL:"https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28top\%2C\%20rgba\%28255\%2C35\%2C15\%2C1\%29\%200\%25\%2C\%20rgba\%28255\%2C35\%2C15\%2C1\%29\%204\%25\%2C\%20rgba\%28190\%2C18\%2C46\%2C1\%29\%2054\%25\%2C\%20rgba\%28190\%2C18\%2C46\%2C1\%29\%2095\%25\%2C\%20rgba\%28255\%2C34\%2C5\%2C1\%29\%20100\%25\%29\%3B'"
+*/
+
+.header {
+	background-color: #be122e;/* #563d7c; */
+	padding: 5px;
+	color: white;
+	min-width: 800px;
+}
+
+.form-header {
+	background-color: black;/* #563d7c; */
+	padding: 5px;
+	margin-top: 150px; 
+	color: white;
+}
+.custom-container {
+	margin-top: 10px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 15px;
+	padding: 0px;
+}
+
+.title {
+	vertical-align: middle;
+}
+
+.logo {
+	width: 300px;
+	height: auto;
+}
+.wrapper {
+	float: 	right;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#countdown-timer {
+		float:left;
+		font-size: 20px;
+}
+
+.register-btn, .home-btn {
+	border: 2px solid white;
+	color: white;
+	font-size: 20px;
+	margin : 10px;	
+	background-color: rgb(50,50,50);	
+}
+
+.register-btn:hover, .home-btn:hover {
+	background: rgba(255,35,15,1);
+	background: -moz-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,35,15,1)), color-stop(4%, rgba(255,35,15,1)), color-stop(54%, rgba(190,18,46,1)), color-stop(99%, rgba(190,18,46,1)), color-stop(100%, rgba(255,34,5,1)));
+	background: -webkit-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff230f', endColorstr='#ff2205', GradientType=0 );
+	border: 2px solid white;
+	color: white;
+	font-size: 20px;	
+}
+/*table,td {
+		border : 1px solid white;
+		border-collapse: collapse;
+}*/
+
+td {
+	padding: 3px;
+	text-align: center;
+}
+
+#uploadFile {
+	display: none;
+}
+
+.item {
+	width: 700px;
+}
+
+#imageUploadBtn {
+	background: url('../images/uploadPic.png') no-repeat;
+	border: none;
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+}
+
+.buttons {
+	margin: 10px 20px;
+}
+
+form {
+	margin-top: 30px;
+	padding: 30px;
+}
+
+.mandate {
+	color: red ;
+	font-weight: bold;
+	margin: 2px;
+}
+
+span.mandate {
+	font-weight: normal;
+	font-style: italic;
+}
+
+.alert {
+	margin-bottom: 5px;
+}
+
+.trimpadding {
+	padding-left: 0px;
+}
+
+.banner {
+	width: 100%;
+	height: 200px;	
+}
+
+.content-bg {
+		margin-top: 150px;
+		background-image: url('../images/banner.png');
+		background-repeat: no-repeat;
+		/*background-attachment: fixed;*/
+		background-size: contain;
+		min-height: 500px;
+}
+
+.content {
+	background-color: rgba(255,255,255,0.9);
+}
+
+.jumbotron {
+	background-color: rgba(255,255,255,0.2);
+	padding: 30px;
+}
+
+.btn-register {
+	background-color: #be122e;
+	border: 2px solid black;
+	color: white;
+	font-size: 20px;	
+}
+
+.btn-reset {
+	border: 2px solid black;
+	font-size: 20px;	
+}
+
+.btn-register:hover {
+	background: rgba(255,35,15,1);
+	background: -moz-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,35,15,1)), color-stop(4%, rgba(255,35,15,1)), color-stop(54%, rgba(190,18,46,1)), color-stop(99%, rgba(190,18,46,1)), color-stop(100%, rgba(255,34,5,1)));
+	background: -webkit-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,35,15,1) 0%, rgba(255,35,15,1) 4%, rgba(190,18,46,1) 54%, rgba(190,18,46,1) 99%, rgba(255,34,5,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff230f', endColorstr='#ff2205', GradientType=0 );
+	border: 2px solid black;
+	color: white;
+	font-size: 20px;	
+}
+
+address {
+	font-size: 14px;
+}
+
+fieldset {
+	border-collapse: collapse;	
+	border: 2px solid black ;
+	padding: 15px;
+	margin: 10px;
+	font-size: 12px;
+}
+.sponsors {
+	text-align: center;
+}
+
+legend {
+	background-color: #be122e;
+	border: 2px solid black;
+	color: white;
+	padding: 5px;
+	text-align: center;
+}
+
+#hidden_image_name {
+	display: none;
+}
+
+#loader {
+	top: 50%;
+    right: 45%;
+    position: fixed;
+    z-index: 1000;
+}
